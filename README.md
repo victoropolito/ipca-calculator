@@ -68,7 +68,7 @@ curl "http://localhost:8080/historicoIPCA/calculo?valor=1000&anoInicial=2020&ano
 ```
 
 #### Consultar histórico completo:
-```bash
+```http
 GET /historicoIPCA
 ```
 
@@ -84,7 +84,7 @@ curl "http://localhost:8080/historicoIPCA?ano=2022"
 
 #### Consultar histórico por ID:
 
-```bash
+```http
 GET /historicoIPCA/:id
 ```
 
