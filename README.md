@@ -1,6 +1,6 @@
 # Calculadora de Reajuste de IPCA
 
-Este projeto implementa uma calculadora de reajuste baseada no IPCA (Índice de Preços ao Consumidor Amplo), utilizando dados históricos locais. A aplicação é uma API REST desenvolvida em Node.js com Express, que permite calcular o reajuste do valor monetário entre períodos específicos, além de consultar informações históricas do IPCA.
+Este projeto implementa uma calculadora de reajuste baseada no IPCA (Índice de Preços ao Consumidor Amplo), utilizando dados históricos locais. A aplicação é uma API REST desenvolvida em Node.js com Express, que permite calcular o reajuste do valor monetário entre períodos específicos, além de consultar informações históricas do IPCA. A API, está [rodando](https://ipca-calculator.onrender.com) caso queira testar antes de clonar.
 
 ## Sumário
 
