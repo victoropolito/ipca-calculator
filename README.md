@@ -7,6 +7,7 @@ Este projeto implementa uma calculadora de reajuste baseada no IPCA (Índice de 
 - [Visão Geral](#visão-geral)
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
+- [Uso](#uso)
 
 ## Visão Geral
 
@@ -30,7 +31,68 @@ Antes de iniciar, certifique-se de ter as seguintes ferramentas instaladas:
    cd ipca-calculator
    ```
 
-1. Rodando a calculadora:
+2. Instale as dependências do projeto::
+   ```bash
+   npm install
+   ```
+
+3. Execute o servidor:
    ```bash
    node index.js
    ```
+
+   A API estará disponível em 
+   ```bash 
+   http://localhost:8080.
+   ```
+
+## Uso
+
+### Endpoints Disponíveis
+
+#### Calcular o Reajuste IPCA
+
+```http
+GET /historicoIPCA/calculo
+```
+
+- Parâmetros de consulta:
+
+i) valor (number): Valor inicial a ser reajustado.
+ii) anoInicial, anoFinal (number): Ano de início e fim do período.
+iii) mesInicial, mesFinal (number): Mês de início e fim do período.
+
+- Exemplo de Uso:
+```bash
+curl "http://localhost:8080/historicoIPCA/calculo?valor=1000&anoInicial=2020&anoFinal=2021&mesInicial=1&mesFinal=12"
+```
+
+#### Consultar histórico completo:
+```bash
+GET /historicoIPCA
+```
+
+- Parâmetros de consulta opcionais:
+
+i) ano (number): Ano específico para a consulta.
+ii) anoInicial, anoFinal, mesInicial, mesFinal (number): Período específico para consulta.
+
+- Exemplo de Uso:
+```bash
+curl "http://localhost:8080/historicoIPCA?ano=2022"
+```
+
+#### Consultar histórico por ID:
+
+```bash
+GET /historicoIPCA/:id
+```
+
+- Parâmetros de rota:
+
+i) id (number): ID específico do registro no histórico.
+
+- Exemplo de Uso:
+```bash
+curl "http://localhost:8080/historicoIPCA/5"
+```
