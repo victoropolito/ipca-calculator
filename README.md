@@ -59,7 +59,9 @@ GET /historicoIPCA/calculo
 - Parâmetros de consulta:
 
 i) valor (number): Valor inicial a ser reajustado.
+
 ii) anoInicial, anoFinal (number): Ano de início e fim do período.
+
 iii) mesInicial, mesFinal (number): Mês de início e fim do período.
 
 - Exemplo de Uso:
@@ -75,6 +77,7 @@ GET /historicoIPCA
 - Parâmetros de consulta opcionais:
 
 i) ano (number): Ano específico para a consulta.
+
 ii) anoInicial, anoFinal, mesInicial, mesFinal (number): Período específico para consulta.
 
 - Exemplo de Uso:
